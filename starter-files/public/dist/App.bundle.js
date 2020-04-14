@@ -63,55 +63,14 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-// based on https://gist.github.com/paulirish/12fb951a8b893a454b32
-
-var $ = document.querySelector.bind(document);
-var $$ = document.querySelectorAll.bind(document);
-
-Node.prototype.on = window.on = function (name, fn) {
-  this.addEventListener(name, fn);
-};
-
-NodeList.prototype.__proto__ = Array.prototype; // eslint-disable-line
-
-NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn) {
-  this.forEach(function (elem) {
-    elem.on(name, fn);
-  });
-};
-
-exports.$ = $;
-exports.$$ = $$;
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(1);
-
-var _bling = __webpack_require__(0);
+throw new Error("Module build failed: Error: Couldn't find preset \"@babel/react\" relative to directory \"/Users/chloej\"\n    at /Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/options/option-manager.js:293:19\n    at Array.map (<anonymous>)\n    at OptionManager.resolvePresets (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/options/option-manager.js:275:20)\n    at OptionManager.mergePresets (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/options/option-manager.js:264:10)\n    at OptionManager.mergeOptions (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/options/option-manager.js:249:14)\n    at OptionManager.init (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)\n    at File.initOptions (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/index.js:212:65)\n    at new File (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/index.js:135:24)\n    at Pipeline.transform (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/pipeline.js:46:16)\n    at transpile (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-loader/lib/index.js:46:20)\n    at Object.module.exports (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-loader/lib/index.js:155:20)");
 
 /***/ })
 /******/ ]);
