@@ -8,10 +8,10 @@ const storeController = require('../controllers/storeController')
 
 router.get('/', catchErrors(storeController.getStores));
 router.get('/stores', catchErrors(storeController.getStores));
-// router.get('/store/:storeName', storeController.getStore);
 router.get('/add', storeController.addStore)
 router.post('/add', catchErrors(storeController.createStore))
-
+router.post('/add/:id', catchErrors(storeController.updateStore))
+router.get('/stores/:id/edit', catchErrors(storeController.editStore));
 
 
 module.exports = router;
