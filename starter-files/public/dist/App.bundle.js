@@ -66,5 +66,12 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
 
+throw new Error("Module build failed: Error: Couldn't find preset \"@babel/react\" relative to directory \"/Users/chloej\"\n    at /Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/options/option-manager.js:293:19\n    at Array.map (<anonymous>)\n    at OptionManager.resolvePresets (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/options/option-manager.js:275:20)\n    at OptionManager.mergePresets (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/options/option-manager.js:264:10)\n    at OptionManager.mergeOptions (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/options/option-manager.js:249:14)\n    at OptionManager.init (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)\n    at File.initOptions (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/index.js:212:65)\n    at new File (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/file/index.js:135:24)\n    at Pipeline.transform (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-core/lib/transformation/pipeline.js:46:16)\n    at transpile (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-loader/lib/index.js:46:20)\n    at Object.module.exports (/Users/chloej/learnNode/dang-thats-delicious/starter-files/node_modules/babel-loader/lib/index.js:155:20)");
+
+/***/ })
+/******/ ]);
 //# sourceMappingURL=App.bundle.js.map

@@ -707,6 +707,7 @@ label {
 
 .stores {
   display: -ms-flexbox;
+  margin: 2em;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -715,7 +716,7 @@ label {
 
 .store {
   background: white;
-  margin: 10px 0;
+  margin: 10px;
   width: 30%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05); }
   .store--wide {
@@ -733,7 +734,7 @@ label {
       width: 100%; } }
 
 .store__actions {
-  position: relative;
+  position: absolute;
   z-index: 2;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -1040,7 +1041,7 @@ label {
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
-    algin-items: center;
+    align-items: center;
     border-top: 1px solid #e6e6e6; }
     .reviewer__meta > * {
       -ms-flex: 1;
