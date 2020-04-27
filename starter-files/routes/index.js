@@ -15,11 +15,13 @@ router.get('/add', authController.isLoggedIn, storeController.addStore)
 router.post('/add', 
     storeController.upload,
     catchErrors(storeController.resize),
-    catchErrors(storeController.createStore))
+    catchErrors(storeController.createStore)
+    )
 router.post('/add/:id', 
     storeController.upload,
     catchErrors(storeController.resize),
-    catchErrors(storeController.updateStore))
+    catchErrors(storeController.updateStore)
+    )
 router.get('/stores/:id/edit', catchErrors(storeController.editStore));
 router.get('/tags/', catchErrors(storeController.getStoresByTag))
 router.get('/tags/:tag', catchErrors(storeController.getStoresByTag))
@@ -38,5 +40,9 @@ router.get('/account', authController.isLoggedIn, userController.account)
 router.post('/account', userController.updateAccount)
 router.post('/account/forgot', catchErrors(authController.forgot))
 router.get('/account/reset/:token', catchErrors(authController.reset))
+router.post('/account/reset/:token', 
+    authController.confirmedPasswords,
+    catchErrors(authController.update)
+    )
 
 module.exports = router;
