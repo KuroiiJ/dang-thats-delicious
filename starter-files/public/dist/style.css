@@ -439,8 +439,15 @@ body {
   font-size: 1.5rem;
   color: #303030; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   font-size: 5rem;
+  font-family: 'Panama';
+  font-weight: 600;
+  letter-spacing: -1px; }
+
+h2 {
+  font-size: 5rem;
+  margin: 40px 0em 0em 40px;
   font-family: 'Panama';
   font-weight: 600;
   letter-spacing: -1px; }
@@ -750,9 +757,9 @@ label {
       justify-content: space-around; }
 
 .store__action {
-  font-size: 25px; }
+  font-size: 10px; }
   .store__action svg {
-    width: 50px;
+    width: 60px;
     fill: white; }
   .store__action--edit a {
     border-bottom: 0; }
@@ -786,7 +793,7 @@ label {
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
 
 .tags {
-  margin: 0;
+  margin: 40px 0em 0em 40px;
   padding: 0;
   list-style: none;
   display: -ms-flexbox;

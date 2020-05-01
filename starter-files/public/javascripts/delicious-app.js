@@ -1,7 +1,8 @@
-// import '../sass/style.scss';
+import '../sass/style.scss';
 
 // import { $, $$ } from './modules/bling';
 // import autocomplete from './modules/autocomplete'
+
 
 
 let input = document.getElementById('address')
@@ -11,8 +12,8 @@ let lng = document.getElementById('lng')
 console.log(input)
 
 
-function autocomplete(input1, latInput, lngInput) {
-    if(!input1) return
+function autocomplete(input, latInput, lngInput) {
+    if(!input) return
     const dropdown = new google.maps.places.Autocomplete(input)
 
     dropdown.addListener('place_changed', () => {
