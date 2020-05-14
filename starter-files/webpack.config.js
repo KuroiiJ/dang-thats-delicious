@@ -17,7 +17,7 @@ const javascript = {
   test: /\.(js)$/, // see how we match anything that ends in `.js`? Cool
   use: [{
     loader: 'babel-loader',
-    options: { presets: ['env'] } // this is one way of passing options
+    options: { presets: ['@babel/preset-env', '@babel/preset-react'] } // this is one way of passing options
   }],
 };
 
@@ -41,10 +41,7 @@ const styles = {
   use: ExtractTextPlugin.extract(['css-loader?sourceMap', postcss, 'sass-loader?sourceMap'])
 };
 
-// We can also use plugins - this one will compress the crap out of our JS
-const uglify = new webpack.optimize.UglifyJsPlugin({ // eslint-disable-line
-  compress: { warnings: false }
-});
+
 
 // OK - now it's time to put it all together
 const config = {
@@ -75,6 +72,13 @@ const config = {
     new ExtractTextPlugin('style.css'),
   ]
 };
+
+
+// // We can also use plugins - this one will compress the crap out of our JS
+// const uglify = new config.optimization.minimize({ // eslint-disable-line
+//   compress: { warnings: false }
+// });
+
 // webpack is cranky about some packages using a soon to be deprecated API. shhhhhhh
 process.noDeprecation = true;
 
