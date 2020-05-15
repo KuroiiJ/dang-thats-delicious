@@ -51,10 +51,14 @@ storeSchema.index({
     description: 'text'
 })
 
+storeSchema.index({
+    location: '2dsphere'
+})
+
 
 //hooks
 
-
+//create unique slugs!
 storeSchema.pre('save', async function(next) {
     if (!this.isModified('name')) {
         next();
