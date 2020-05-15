@@ -42,6 +42,11 @@ const storeSchema = new mongoose.Schema({
         ref: 'User',
         required: 'You must supply an author'
     }
+}, {
+        //mongoose: do these to automatically include virtuals when calling stores
+        toJSON: { virtuals: true },
+        toObject: { virtuals: true },
+    
 })
 
 //indexes
@@ -82,5 +87,46 @@ storeSchema.statics.getTagsList = function () {
         { $sort: { count: -1 } }
     ])
 }
+
+storeSchema.statics.getTopStores = function () {
+    return this.aggregate([
+        //lookup stores and pop their reviews
+        { $lookup: {
+            from: 'reviews', localField: '_id', foreignField: 'store', as: 'reviews'}
+        },
+        //filter for stores that have 2+ reviews
+        { $match: {
+            'reviews.1': { $exists: true} }
+        },
+        //add the average of store reviews
+        { $project: {
+            photo: '$$ROOT.photo',
+            name: '$$ROOT.name',
+            slug: '$$ROOT.slug',
+            reviews: '$$ROOT.reviews',
+            averageRating: { $avg: 'reviews.rating' }
+        }},
+        //sort by new field
+        { $sort: { averageRating: -1 }},
+        //limit to ten
+        { $limit: 10}
+    ])
+}
+
+
+//link to reviews **This is Mongoose Specific** 
+storeSchema.virtual('reviews', {
+    ref: 'Review',
+    localField: '_id',
+    foreignField: 'store'
+})
+
+function autopopulate(next) {
+    this.populate('reviews')
+    next()
+}
+
+storeSchema.pre('find', autopopulate)
+storeSchema.pre('findOne', autopopulate)
 
 module.exports = mongoose.model('Store', storeSchema)
