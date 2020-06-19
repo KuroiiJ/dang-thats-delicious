@@ -721,7 +721,7 @@ label {
 .store {
   background: white;
   margin: 1.25em 0 0 1.25em;
-  width: calc(33.3333% - 1.25em);
+  width: calc(100% - 1.25em);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05); }
   .store--wide {
     width: 100%; }
